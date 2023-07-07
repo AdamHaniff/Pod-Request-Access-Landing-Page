@@ -1,0 +1,137 @@
+// ********** STYLE GUIDE **********
+
+// ************* COLORS ************
+$color-mediumAquamarine: #54e6af;
+$color-tuna: #2c344b;
+$color-mirage: #121725;
+$color-white: #ffffff;
+$color-marbleBlue: #5a668a;
+$color-periwinkleGrey: #c2cbe5;
+$color-error: #fb3e3e;
+$color-buttonHover: #b3ffe2;
+
+// ********** FONT FAMILY **********
+$font-primary: "Chivo", sans-serif;
+
+// ********* FONT WEIGHT **********
+$font-weight-normal: 400;
+
+// ************ GENERAL ************
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: inherit;
+}
+
+html {
+  font-size: 62.5%;
+}
+
+html,
+body,
+main {
+  height: 100%;
+}
+
+body {
+  box-sizing: border-box;
+  font-family: $font-primary;
+  font-weight: $font-weight-normal;
+  padding: 6.2rem 2.4rem 9.4rem;
+  background: linear-gradient(
+      rgba($color-mirage, 0.9),
+      rgba($color-mirage, 0.9)
+    ),
+    url("/assets/mobile/image-host.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+// ********* LOGO CONTAINER ********
+.logo-container {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 5.7rem;
+}
+
+.logo-img {
+  display: block;
+}
+
+// ******** TEXT CONTAINER *********
+.text-container {
+  text-align: center;
+  margin-bottom: 3.3rem;
+
+  &__paragraph {
+    color: $color-periwinkleGrey;
+    font-size: 1.5rem;
+    line-height: 2.5rem;
+  }
+}
+
+.heading-primary {
+  font-size: 2.6rem;
+  line-height: 3.8rem;
+  text-transform: uppercase;
+  margin-bottom: 1.6rem;
+
+  &--green {
+    color: $color-mediumAquamarine;
+  }
+
+  &--white {
+    color: $color-white;
+  }
+
+  &--green,
+  &--white {
+    display: block;
+  }
+}
+
+// **** PODCAST LOGOS CONTAINER ****
+.podcast-logos-container {
+  display: flex;
+  align-items: center;
+  margin-bottom: 4.8rem;
+}
+
+.podcast-logo {
+  display: block;
+
+  &--spotify {
+    max-width: 5.6rem;
+    max-height: 1.7rem;
+    margin-right: 2.3rem;
+  }
+
+  &--apple {
+    max-width: 4.5rem;
+    max-height: 1.7rem;
+    margin-right: 2.5rem;
+  }
+
+  &--google {
+    max-width: 7.3rem;
+    max-height: 1.1rem;
+    margin-right: 1.6rem;
+  }
+
+  &--pocket {
+    max-width: 7.7rem;
+    max-height: 1.5rem;
+  }
+}
+
+// ******** FORM CONTAINER *********
+.form,
+.form__input,
+.form__btn {
+  display: block;
+
+  &__input {
+  }
+}
