@@ -16,6 +16,22 @@ $font-primary: "Chivo", sans-serif;
 // ********* FONT WEIGHT **********
 $font-weight-normal: 400;
 
+// ************** MXINS *************
+@mixin input-btn-styles {
+  width: 100%;
+  height: 4.6rem;
+  border-radius: 2.8rem;
+  border: none;
+}
+
+@mixin text-styles($color) {
+  font-family: $font-primary;
+  font-size: 1.4rem;
+  font-weight: $font-weight-normal;
+  line-height: 2.8rem;
+  color: $color;
+}
+
 // ************ GENERAL ************
 *,
 *::before,
@@ -30,9 +46,8 @@ html {
 }
 
 html,
-body,
-main {
-  height: 100%;
+body {
+  min-height: 100%;
 }
 
 body {
@@ -58,6 +73,7 @@ body {
 
 .logo-img {
   display: block;
+  max-width: 100%;
 }
 
 // ******** TEXT CONTAINER *********
@@ -96,6 +112,7 @@ body {
 .podcast-logos-container {
   display: flex;
   align-items: center;
+  justify-content: center;
   margin-bottom: 4.8rem;
 }
 
@@ -103,24 +120,28 @@ body {
   display: block;
 
   &--spotify {
+    width: 17.1%;
     max-width: 5.6rem;
     max-height: 1.7rem;
-    margin-right: 2.3rem;
+    margin-right: 7%;
   }
 
   &--apple {
+    width: 13.8%;
     max-width: 4.5rem;
     max-height: 1.7rem;
-    margin-right: 2.5rem;
+    margin-right: 7.6%;
   }
 
   &--google {
+    width: 22.3%;
     max-width: 7.3rem;
     max-height: 1.1rem;
-    margin-right: 1.6rem;
+    margin-right: 4.9%;
   }
 
   &--pocket {
+    width: 23.5%;
     max-width: 7.7rem;
     max-height: 1.5rem;
   }
@@ -133,5 +154,26 @@ body {
   display: block;
 
   &__input {
+    @include input-btn-styles;
+    @include text-styles($color-white);
+    background: $color-tuna;
+    padding: 0.9rem 0 0.9rem 3.2rem;
+    margin-bottom: 1.6rem;
+  }
+
+  &__input::placeholder {
+    @include text-styles($color-white);
+    opacity: 0.5;
+  }
+
+  &__input:focus {
+    outline: none;
+  }
+
+  &__btn {
+    @include input-btn-styles;
+    @include text-styles($color-mirage);
+    background: $color-mediumAquamarine;
+    box-shadow: 0 2.5rem 2rem -2rem rgba(84, 230, 175, 0.5);
   }
 }
