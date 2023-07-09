@@ -32,6 +32,14 @@ $font-weight-normal: 400;
   color: $color;
 }
 
+@mixin error-success-styles($color) {
+  color: $color;
+  font-size: 1.2rem;
+  font-weight: $font-weight-normal;
+  margin-bottom: 0.8rem;
+  margin-left: 3.2rem;
+}
+
 // ************ GENERAL ************
 *,
 *::before,
@@ -153,6 +161,15 @@ body {
 .form__btn {
   display: block;
 
+  &-error-empty,
+  &-error-invalid {
+    @include error-success-styles($color-error);
+  }
+
+  &-submit-success {
+    @include error-success-styles($color-mediumAquamarine);
+  }
+
   &__input {
     @include input-btn-styles;
     @include text-styles($color-white);
@@ -176,4 +193,9 @@ body {
     background: $color-mediumAquamarine;
     box-shadow: 0 2.5rem 2rem -2rem rgba(84, 230, 175, 0.5);
   }
+}
+
+// * CLASSES USED WITH JAVASCRIPT *
+.hidden {
+  display: none;
 }

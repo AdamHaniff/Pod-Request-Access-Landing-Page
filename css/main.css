@@ -101,6 +101,26 @@ body {
 .form__btn {
   display: block;
 }
+.form-error-empty, .form-error-invalid,
+.form__input-error-empty,
+.form__input-error-invalid,
+.form__btn-error-empty,
+.form__btn-error-invalid {
+  color: #fb3e3e;
+  font-size: 1.2rem;
+  font-weight: 400;
+  margin-bottom: 0.8rem;
+  margin-left: 3.2rem;
+}
+.form-submit-success,
+.form__input-submit-success,
+.form__btn-submit-success {
+  color: #54e6af;
+  font-size: 1.2rem;
+  font-weight: 400;
+  margin-bottom: 0.8rem;
+  margin-left: 3.2rem;
+}
 .form__input,
 .form__input__input,
 .form__btn__input {
@@ -154,4 +174,8 @@ body {
   color: #121725;
   background: #54e6af;
   box-shadow: 0 2.5rem 2rem -2rem rgba(84, 230, 175, 0.5);
+}
+
+.hidden {
+  display: none;
 }/*# sourceMappingURL=main.css.map */

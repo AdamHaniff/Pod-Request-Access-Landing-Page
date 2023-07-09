@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+p<!DOCTYPE html>
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
@@ -17,7 +17,7 @@
       rel="stylesheet"
     />
     <link rel="stylesheet" href="/css/main.css" />
-    <script type="module" defer src="script.js"></script>
+    <script type="module" defer src="main.js"></script>
   </head>
   <body>
     <main>
@@ -58,14 +58,13 @@
         />
       </div>
       <div class="form-container">
-        <form class="form" action="" method="post">
-          <input
-            class="form__input"
-            type="email"
-            name="email"
-            required
-            placeholder="Email address"
-          />
+        <form class="form">
+          <p class="form-error-empty hidden">Oops! Please add your email</p>
+          <p class="form-error-invalid hidden">Oops! Please check your email</p>
+          <p class="form-submit-success hidden">
+            Thank you for submitting your email!
+          </p>
+          <input class="form__input" name="email" placeholder="Email address" />
           <button class="form__btn" type="submit">Request Access</button>
         </form>
       </div>
