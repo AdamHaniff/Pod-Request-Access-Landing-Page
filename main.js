@@ -7,35 +7,72 @@ const formErrorEmpty = document.querySelector(".form-error-empty");
 const formErrorInvalid = document.querySelector(".form-error-invalid");
 const formSubmitSuccess = document.querySelector(".form-submit-success");
 const emailInput = document.querySelector(".form__input");
+let emailValue;
 
-// EVENT LISTENER
-// IF EMAIL IS EQUAL TO AN EMPTY STRING
-form.addEventListener("submit", function (e) {
-  const emailValue = emailInput.value.trim();
+// HELPER FUNCTIONS
+function isEmailValid(email) {
+  const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+  return emailRegex.test(email);
+}
+
+function addHiddenClass(element) {
+  element.classList.add("hidden");
+}
+
+function removeHiddenClass(element) {
+  element.classList.remove("hidden");
+}
+
+function trimEmailValue() {
+  emailValue = emailInput.value.trim();
+  return emailValue;
+}
+
+function hideSuccessMessage() {
+  setTimeout(function () {
+    addHiddenClass(formSubmitSuccess);
+  }, 5000);
+}
+
+function resetForm() {
+  form.reset();
+}
+
+function displayFormError(errorElement) {
+  removeHiddenClass(errorElement);
+}
+
+function displayFormSuccess() {
+  if (formErrorInvalid.classList.contains("hidden")) {
+    removeHiddenClass(formSubmitSuccess);
+  } else {
+    addHiddenClass(formErrorInvalid);
+    removeHiddenClass(formSubmitSuccess);
+  }
+}
+
+// EVENT LISTENER CALLBACK FUNCTIONS
+function handleFormSubmit(e) {
+  emailValue = trimEmailValue();
   e.preventDefault();
   if (!emailValue) {
-    formErrorEmpty.classList.remove("hidden");
+    displayFormError(formErrorEmpty);
   } else if (!isEmailValid(emailValue)) {
-    formErrorInvalid.classList.remove("hidden");
+    displayFormError(formErrorInvalid);
   } else {
-    formErrorInvalid.classList.add("hidden");
-    formSubmitSuccess.classList.remove("hidden");
-    form.reset();
-    setTimeout(function () {
-      formSubmitSuccess.classList.add("hidden");
-    }, 5000);
+    displayFormSuccess();
+    resetForm();
+    hideSuccessMessage();
   }
+}
 
-  function isEmailValid(email) {
-    const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
-    return emailRegex.test(email);
-  }
-});
-
-// NOW WANT TO REMOVE ERROR IF USER BEGINS TYPING
-emailInput.addEventListener("input", function () {
-  const emailValue = emailInput.value.trim();
+function handleInputChange() {
+  emailValue = trimEmailValue();
   if (emailValue) {
     formErrorEmpty.classList.add("hidden");
   }
-});
+}
+
+// EVENT LISTENERS
+form.addEventListener("submit", handleFormSubmit);
+emailInput.addEventListener("input", handleInputChange);
