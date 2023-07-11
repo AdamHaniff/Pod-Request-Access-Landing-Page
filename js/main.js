@@ -1,3 +1,9 @@
+import {
+  addHiddenClassTo,
+  removeHiddenClassFrom,
+  displayFormError,
+  isEmailValid,
+} from "./helpers.js";
 import "core-js/stable";
 import "regenerator-runtime/runtime";
 
@@ -10,45 +16,28 @@ const emailInput = document.querySelector(".form__input");
 let emailValue;
 
 // HELPER FUNCTIONS
-function isEmailValid(email) {
-  const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
-  return emailRegex.test(email);
-}
-
-function addHiddenClass(element) {
-  element.classList.add("hidden");
-}
-
-function removeHiddenClass(element) {
-  element.classList.remove("hidden");
-}
-
 function trimEmailValue() {
   emailValue = emailInput.value.trim();
   return emailValue;
 }
 
-function hideSuccessMessage() {
-  setTimeout(function () {
-    addHiddenClass(formSubmitSuccess);
-  }, 5000);
+function displayFormSuccess() {
+  if (formErrorInvalid.classList.contains("hidden")) {
+    removeHiddenClassFrom(formSubmitSuccess);
+  } else {
+    addHiddenClassTo(formErrorInvalid);
+    removeHiddenClassFrom(formSubmitSuccess);
+  }
 }
 
 function resetForm() {
   form.reset();
 }
 
-function displayFormError(errorElement) {
-  removeHiddenClass(errorElement);
-}
-
-function displayFormSuccess() {
-  if (formErrorInvalid.classList.contains("hidden")) {
-    removeHiddenClass(formSubmitSuccess);
-  } else {
-    addHiddenClass(formErrorInvalid);
-    removeHiddenClass(formSubmitSuccess);
-  }
+function hideSuccessMessage() {
+  setTimeout(function () {
+    addHiddenClassTo(formSubmitSuccess);
+  }, 5000);
 }
 
 // EVENT LISTENER CALLBACK FUNCTIONS
@@ -69,7 +58,7 @@ function handleFormSubmit(e) {
 function handleInputChange() {
   emailValue = trimEmailValue();
   if (emailValue) {
-    formErrorEmpty.classList.add("hidden");
+    addHiddenClassTo(formErrorEmpty);
   }
 }
 
