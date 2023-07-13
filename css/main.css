@@ -23,6 +23,13 @@ body {
   background: linear-gradient(rgba(18, 23, 37, 0.9), rgba(18, 23, 37, 0.9)), url("/assets/mobile/image-host.jpg");
   background-size: cover;
   background-repeat: no-repeat;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+main {
+  max-width: 57.1rem;
 }
 
 .logo-container {
@@ -74,26 +81,26 @@ body {
 }
 .podcast-logo--spotify {
   width: 17.1%;
-  max-width: 5.6rem;
-  max-height: 1.7rem;
+  max-width: 9.6rem;
+  max-height: 2.9rem;
   margin-right: 7%;
 }
 .podcast-logo--apple {
   width: 13.8%;
-  max-width: 4.5rem;
-  max-height: 1.7rem;
+  max-width: 7.8rem;
+  max-height: 2.9rem;
   margin-right: 7.6%;
 }
 .podcast-logo--google {
   width: 22.3%;
-  max-width: 7.3rem;
-  max-height: 1.1rem;
+  max-width: 12.5rem;
+  max-height: 1.8rem;
   margin-right: 4.9%;
 }
 .podcast-logo--pocket {
   width: 23.5%;
-  max-width: 7.7rem;
-  max-height: 1.5rem;
+  max-width: 12.9rem;
+  max-height: 2.6rem;
 }
 
 .form,
@@ -176,6 +183,71 @@ body {
   box-shadow: 0 2.5rem 2rem -2rem rgba(84, 230, 175, 0.5);
 }
 
+@media (min-width: 48em) {
+  body {
+    padding: 0 0 0 3.9rem;
+    background: initial;
+    display: block;
+    background-color: #121725;
+  }
+  .logo-container {
+    height: 25.8rem;
+    width: 27.7rem;
+    display: block;
+    padding-top: 5rem;
+    margin-bottom: initial;
+  }
+  .logo-img {
+    width: 13.4851rem;
+    height: 5.6rem;
+  }
+  .text-container {
+    width: 63.5rem;
+    height: 50.9rem;
+    padding-top: 9.3rem;
+    text-align: initial;
+    margin-bottom: initial;
+    background: purple;
+  }
+  .text-container__paragraph {
+    font-size: 1.8rem;
+    line-height: 2.8rem;
+    width: 44.5rem;
+    height: 8.4rem;
+    margin-bottom: 4rem;
+  }
+  .heading-primary {
+    font-size: 4.8rem;
+    line-height: 5.6rem;
+    margin-bottom: 3.1rem;
+  }
+  .form .input-btn-container,
+  .form__input .input-btn-container,
+  .form__btn .input-btn-container {
+    position: relative;
+    width: 42.7rem;
+    height: 5.6rem;
+    margin-bottom: 6.4rem;
+  }
+  .form__input,
+  .form__input__input,
+  .form__btn__input {
+    width: 100%;
+    height: 100%;
+    padding: 1.4rem 0 1.4rem 3.2rem;
+    margin-bottom: initial;
+  }
+  .form__btn,
+  .form__input__btn,
+  .form__btn__btn {
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 16.2rem;
+    height: 4.6rem;
+    margin: 0.5rem 0.5rem 0.5rem 0;
+  }
+}
 .hidden {
   display: none;
 }/*# sourceMappingURL=main.css.map */

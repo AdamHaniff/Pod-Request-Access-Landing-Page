@@ -15,7 +15,7 @@ const formSubmitSuccess = document.querySelector(".form-submit-success");
 const emailInput = document.querySelector(".form__input");
 let emailValue;
 
-// HELPER FUNCTIONS
+// FUNCTIONS
 function trimEmailValue() {
   emailValue = emailInput.value.trim();
   return emailValue;
