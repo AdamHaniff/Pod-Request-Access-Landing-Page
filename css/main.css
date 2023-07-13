@@ -190,6 +190,19 @@ main {
     display: block;
     background-color: #121725;
   }
+  main::after {
+    content: "";
+    display: block;
+    background-image: linear-gradient(rgba(84, 230, 175, 0.05), rgba(84, 230, 175, 0.05)), url("/assets/tablet/image-host.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    width: 49.1rem;
+    height: 76.7rem;
+    position: absolute;
+    top: 0;
+    right: 0;
+    z-index: -1;
+  }
   .logo-container {
     height: 25.8rem;
     width: 27.7rem;
@@ -207,7 +220,9 @@ main {
     padding-top: 9.3rem;
     text-align: initial;
     margin-bottom: initial;
-    background: purple;
+    background: #121725;
+    display: flex;
+    flex-direction: column;
   }
   .text-container__paragraph {
     font-size: 1.8rem;
@@ -227,7 +242,6 @@ main {
     position: relative;
     width: 42.7rem;
     height: 5.6rem;
-    margin-bottom: 6.4rem;
   }
   .form__input,
   .form__input__input,
@@ -246,6 +260,56 @@ main {
     width: 16.2rem;
     height: 4.6rem;
     margin: 0.5rem 0.5rem 0.5rem 0;
+  }
+  .form-error-empty, .form-error-invalid, .form-submit-success,
+  .form__input-error-empty,
+  .form__input-error-invalid,
+  .form__input-submit-success,
+  .form__btn-error-empty,
+  .form__btn-error-invalid,
+  .form__btn-submit-success {
+    margin-bottom: initial;
+    margin-top: 0.8rem;
+  }
+  .podcast-logos-container {
+    justify-content: flex-start;
+    margin-top: auto;
+    margin-bottom: initial;
+  }
+  .podcast-logo--spotify {
+    width: 9.6rem;
+    height: 2.9rem;
+    max-width: initial;
+    max-height: initial;
+    margin-right: 4rem;
+  }
+  .podcast-logo--apple {
+    width: 7.8rem;
+    height: 2.9rem;
+    max-width: initial;
+    max-height: initial;
+    margin-right: 4.1rem;
+  }
+  .podcast-logo--google {
+    width: 12.5rem;
+    height: 1.8rem;
+    max-width: initial;
+    max-height: initial;
+    margin-right: 2.7rem;
+  }
+  .podcast-logo--pocket {
+    width: 12.9rem;
+    height: 2.6rem;
+    max-width: initial;
+    max-height: initial;
+  }
+  .pattern-dots-container {
+    height: 25.7rem;
+    display: flex;
+  }
+  .pattern-dots-img {
+    display: block;
+    margin-top: auto;
   }
 }
 .hidden {

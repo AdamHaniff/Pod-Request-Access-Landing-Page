@@ -212,6 +212,24 @@ main {
     background-color: $color-mirage;
   }
 
+  main::after {
+    content: "";
+    display: block;
+    background-image: linear-gradient(
+        rgba($color-mediumAquamarine, 0.05),
+        rgba($color-mediumAquamarine, 0.05)
+      ),
+      url("/assets/tablet/image-host.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    width: 49.1rem;
+    height: 76.7rem;
+    position: absolute;
+    top: 0;
+    right: 0;
+    z-index: -1;
+  }
+
   // ******** LOGO CONTAINER ********
   .logo-container {
     height: 25.8rem;
@@ -233,7 +251,9 @@ main {
     padding-top: 9.3rem;
     text-align: initial;
     margin-bottom: initial;
-    background: purple;
+    background: $color-mirage;
+    display: flex;
+    flex-direction: column;
 
     &__paragraph {
       font-size: 1.8rem;
@@ -258,7 +278,6 @@ main {
       position: relative;
       width: 42.7rem;
       height: 5.6rem;
-      margin-bottom: 6.4rem;
     }
 
     &__input {
@@ -276,9 +295,65 @@ main {
       height: 4.6rem;
       margin: 0.5rem 0.5rem 0.5rem 0;
     }
+
+    &-error-empty,
+    &-error-invalid,
+    &-submit-success {
+      margin-bottom: initial;
+      margin-top: 0.8rem;
+    }
   }
 
   // *** PODCAST LOGOS CONTAINER ***
+  .podcast-logos-container {
+    justify-content: flex-start;
+    margin-top: auto;
+    margin-bottom: initial;
+  }
+
+  .podcast-logo {
+    &--spotify {
+      width: 9.6rem;
+      height: 2.9rem;
+      max-width: initial;
+      max-height: initial;
+      margin-right: 4rem;
+    }
+
+    &--apple {
+      width: 7.8rem;
+      height: 2.9rem;
+      max-width: initial;
+      max-height: initial;
+      margin-right: 4.1rem;
+    }
+
+    &--google {
+      width: 12.5rem;
+      height: 1.8rem;
+      max-width: initial;
+      max-height: initial;
+      margin-right: 2.7rem;
+    }
+
+    &--pocket {
+      width: 12.9rem;
+      height: 2.6rem;
+      max-width: initial;
+      max-height: initial;
+    }
+  }
+
+  // *** PATTERN DOTS CONTAINER ***
+  .pattern-dots-container {
+    height: 25.7rem;
+    display: flex;
+  }
+
+  .pattern-dots-img {
+    display: block;
+    margin-top: auto;
+  }
 }
 
 // * CLASSES USED WITH JAVASCRIPT *
