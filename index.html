@@ -18,12 +18,13 @@
     />
     <link rel="stylesheet" href="/css/main.css" />
     <script type="module" defer src="js/helpers.js"></script>
+    <script type="module" defer src="js/mobile-tablet-markups.js"></script>
     <script type="module" defer src="js/viewport-handler.js"></script>
     <script type="module" defer src="js/main.js"></script>
   </head>
   <body>
     <main>
-      <div class="logo-container">
+      <!-- <div class="logo-container">
         <img class="logo-img" src="assets/desktop/logo.svg" alt="Pod logo" />
       </div>
       <div class="text-container">
@@ -69,69 +70,71 @@
           <input class="form__input" name="email" placeholder="Email address" />
           <button class="form__btn" type="submit">Request Access</button>
         </form>
+      </div> -->
+
+      <!-- 768px HTML -->
+      <div class="logo-container">
+        <img class="logo-img" src="assets/desktop/logo.svg" alt="Pod logo" />
+      </div>
+      <div class="text-container">
+        <h1 class="heading-primary">
+          <span class="heading-primary--green">Publish Your Podcasts</span>
+          <span class="heading-primary--white">Everywhere.</span>
+        </h1>
+        <p class="text-container__paragraph">
+          Upload your audio to Pod with a single click. We'll then distribute
+          your podcast to Spotify, Apple Podcasts, Google Podcasts, Pocket Casts
+          and more!
+        </p>
+        <div class="form-container">
+          <form class="form">
+            <div class="input-btn-container">
+              <input
+                class="form__input"
+                name="email"
+                placeholder="Email address"
+              />
+              <button class="form__btn" type="submit">Request Access</button>
+            </div>
+            <p class="form-error-empty hidden">Oops! Please add your email</p>
+            <p class="form-error-invalid hidden">
+              Oops! Please check your email
+            </p>
+            <p class="form-submit-success hidden">
+              Thank you for submitting your email!
+            </p>
+          </form>
+        </div>
+        <div class="podcast-logos-container">
+          <img
+            class="podcast-logo podcast-logo--spotify"
+            src="assets/desktop/spotify.svg"
+            alt="Spotify logo"
+          />
+          <img
+            class="podcast-logo podcast-logo--apple"
+            src="assets/desktop/apple-podcast.svg"
+            alt="Apple Podcast logo"
+          />
+          <img
+            class="podcast-logo podcast-logo--google"
+            src="assets/desktop/google-podcasts.svg"
+            alt="Google Podcasts logo"
+          />
+          <img
+            class="podcast-logo podcast-logo--pocket"
+            src="assets/desktop/pocket-casts.svg"
+            alt="Pocket Casts logo"
+          />
+        </div>
+      </div>
+      <div class="pattern-dots-container">
+        <img
+          class="pattern-dots-img"
+          src="./assets/desktop/bg-pattern-dots.svg"
+          alt="Green-patterned dots"
+        />
       </div>
     </main>
-
-    <!-- 768px HTML -->
-    <!-- <div class="logo-container">
-      <img class="logo-img" src="assets/desktop/logo.svg" alt="Pod logo" />
-    </div>
-    <div class="text-container">
-      <h1 class="heading-primary">
-        <span class="heading-primary--green">Publish Your Podcasts</span>
-        <span class="heading-primary--white">Everywhere.</span>
-      </h1>
-      <p class="text-container__paragraph">
-        Upload your audio to Pod with a single click. We'll then distribute your
-        podcast to Spotify, Apple Podcasts, Google Podcasts, Pocket Casts and
-        more!
-      </p>
-      <div class="form-container">
-        <form class="form">
-          <div class="input-btn-container">
-            <input
-              class="form__input"
-              name="email"
-              placeholder="Email address"
-            />
-            <button class="form__btn" type="submit">Request Access</button>
-          </div>
-          <p class="form-error-empty hidden">Oops! Please add your email</p>
-          <p class="form-error-invalid hidden">Oops! Please check your email</p>
-          <p class="form-submit-success hidden">
-            Thank you for submitting your email!
-          </p>
-        </form>
-      </div>
-      <div class="podcast-logos-container">
-        <img
-          class="podcast-logo podcast-logo--spotify"
-          src="assets/desktop/spotify.svg"
-          alt="Spotify logo"
-        />
-        <img
-          class="podcast-logo podcast-logo--apple"
-          src="assets/desktop/apple-podcast.svg"
-          alt="Apple Podcast logo"
-        />
-        <img
-          class="podcast-logo podcast-logo--google"
-          src="assets/desktop/google-podcasts.svg"
-          alt="Google Podcasts logo"
-        />
-        <img
-          class="podcast-logo podcast-logo--pocket"
-          src="assets/desktop/pocket-casts.svg"
-          alt="Pocket Casts logo"
-        />
-      </div>
-    </div>
-    <div class="pattern-dots-container">
-      <img
-        class="pattern-dots-img"
-        src="./assets/desktop/bg-pattern-dots.svg"
-        alt="Green-patterned dots"
-      />
-    </div> -->
   </body>
 </html>
