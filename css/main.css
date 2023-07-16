@@ -359,6 +359,11 @@ main {
     margin-top: initial;
     transform: translateY(-50%);
   }
+  .form__btn:is(:hover, :focus) {
+    cursor: pointer;
+    background: #b3ffe2;
+    outline: none;
+  }
 }
 .hidden {
   display: none;

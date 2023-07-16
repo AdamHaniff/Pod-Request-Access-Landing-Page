@@ -420,6 +420,13 @@ main {
     margin-top: initial;
     transform: translateY(-50%);
   }
+
+  // ********* HOVER STATE *********
+  .form__btn:is(:hover, :focus) {
+    cursor: pointer;
+    background: $color-buttonHover;
+    outline: none;
+  }
 }
 
 // * CLASSES USED WITH JAVASCRIPT *

@@ -9,6 +9,7 @@ import "regenerator-runtime/runtime";
 
 // VARIABLES
 const form = document.querySelector(".form");
+const formBtn = document.querySelector(".form__btn");
 const formErrorEmpty = document.querySelector(".form-error-empty");
 const formErrorInvalid = document.querySelector(".form-error-invalid");
 const formSubmitSuccess = document.querySelector(".form-submit-success");
@@ -16,6 +17,10 @@ const emailInput = document.querySelector(".form__input");
 let emailValue;
 
 // FUNCTIONS
+function removeButtonFocus() {
+  formBtn.blur();
+}
+
 function trimEmailValue() {
   emailValue = emailInput.value.trim();
   return emailValue;
@@ -42,8 +47,9 @@ function hideSuccessMessage() {
 
 // EVENT LISTENER CALLBACK FUNCTIONS
 function handleFormSubmit(e) {
-  emailValue = trimEmailValue();
   e.preventDefault();
+  removeButtonFocus();
+  emailValue = trimEmailValue();
   if (!emailValue) {
     displayFormError(formErrorEmpty);
   } else if (!isEmailValid(emailValue)) {
