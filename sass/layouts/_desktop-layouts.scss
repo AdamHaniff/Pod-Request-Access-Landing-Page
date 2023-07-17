@@ -1,0 +1,70 @@
+// ******** DESKTOP LAYOUTS *********
+
+// ******* 1165px MEDIA QUERY *******
+@media (min-width: 72.81em) {
+  body {
+    display: flex;
+    padding: 0;
+  }
+}
+
+// ******* 1440px MEDIA QUERY *******
+@media (min-width: 90em) {
+  body {
+    padding: 10.2rem 0 0 16.5rem;
+    display: block;
+  }
+
+  main::after {
+    background-image: linear-gradient(
+        rgba($color-mediumAquamarine, 0.05),
+        rgba($color-mediumAquamarine, 0.05)
+      ),
+      url("/assets/desktop/image-host.jpg");
+    width: 88.8rem;
+    height: 64rem;
+    top: 13rem;
+  }
+
+  // ******** LOGO CONTAINER ********
+  .logo-container {
+    height: initial;
+    width: initial;
+    display: inline-block;
+    padding-top: initial;
+    margin-bottom: 10.3rem;
+  }
+
+  // ******** TEXT CONTAINER ********
+  .text-container {
+    width: 72.3rem;
+    height: 50.9rem;
+    padding-top: 8.8rem;
+  }
+
+  .heading-primary {
+    font-size: 5.2rem;
+    line-height: 6.2rem;
+    margin-bottom: 2.4rem;
+  }
+
+  // **** PATTERN DOTS CONTAINER ****
+  .pattern-dots-container {
+    height: 13rem;
+    justify-content: flex-end;
+  }
+
+  .pattern-dots-img {
+    width: 23.2rem;
+    height: 10.4rem;
+    margin-top: initial;
+    transform: translateY(-50%);
+  }
+
+  // ********* HOVER STATE *********
+  .form__btn:is(:hover, :focus) {
+    cursor: pointer;
+    background: $color-buttonHover;
+    outline: none;
+  }
+}

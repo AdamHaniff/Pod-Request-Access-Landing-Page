@@ -1,0 +1,23 @@
+// ************** MIXINS ************
+@mixin input-btn-styles {
+  width: 100%;
+  height: 4.6rem;
+  border-radius: 2.8rem;
+  border: none;
+}
+
+@mixin text-styles($color) {
+  font-family: $font-primary;
+  font-size: 1.4rem;
+  font-weight: $font-weight-normal;
+  line-height: 2.8rem;
+  color: $color;
+}
+
+@mixin error-success-styles($color) {
+  color: $color;
+  font-size: 1.2rem;
+  font-weight: $font-weight-normal;
+  margin-bottom: 0.8rem;
+  margin-left: 3.2rem;
+}

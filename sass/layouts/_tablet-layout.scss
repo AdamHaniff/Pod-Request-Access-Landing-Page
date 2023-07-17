@@ -1,0 +1,159 @@
+// ********* TABLET LAYOUT **********
+
+// ******* 768px MEDIA QUERY ********
+@media (min-width: 48em) {
+  // *********** GENERAL ************
+  body {
+    padding: 0 0 0 3.9rem;
+    background: initial;
+    display: block;
+    background-color: $color-mirage;
+  }
+
+  main {
+    max-width: initial;
+  }
+
+  main::after {
+    content: "";
+    display: block;
+    background-image: linear-gradient(
+        rgba($color-mediumAquamarine, 0.05),
+        rgba($color-mediumAquamarine, 0.05)
+      ),
+      url("/assets/tablet/image-host.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    width: 49.1rem;
+    height: 76.7rem;
+    position: absolute;
+    top: 0;
+    right: 0;
+    z-index: -1;
+  }
+
+  // ******** LOGO CONTAINER ********
+  .logo-container {
+    height: 25.8rem;
+    width: 27.7rem;
+    display: block;
+    padding-top: 5rem;
+    margin-bottom: initial;
+  }
+
+  .logo-img {
+    width: 13.4851rem;
+    height: 5.6rem;
+  }
+
+  // ******** TEXT CONTAINER ********
+  .text-container {
+    width: 63.5rem;
+    height: 50.9rem;
+    padding-top: 9.3rem;
+    text-align: initial;
+    margin-bottom: initial;
+    background: $color-mirage;
+    display: flex;
+    flex-direction: column;
+
+    &__paragraph {
+      font-size: 1.8rem;
+      line-height: 2.8rem;
+      width: 44.5rem;
+      height: 8.4rem;
+      margin-bottom: 4rem;
+    }
+  }
+
+  .heading-primary {
+    font-size: 4.8rem;
+    line-height: 5.6rem;
+    margin-bottom: 3.1rem;
+  }
+
+  // ******** FORM CONTAINER ********
+  .form,
+  .form__input,
+  .form__btn {
+    .input-btn-container {
+      position: relative;
+      width: 42.7rem;
+      height: 5.6rem;
+    }
+
+    &__input {
+      width: 100%;
+      height: 100%;
+      padding: 1.4rem 0 1.4rem 3.2rem;
+      margin-bottom: initial;
+    }
+
+    &__btn {
+      position: absolute;
+      top: 0;
+      right: 0;
+      width: 16.2rem;
+      height: 4.6rem;
+      margin: 0.5rem 0.5rem 0.5rem 0;
+    }
+
+    &-error-empty,
+    &-error-invalid,
+    &-submit-success {
+      margin-bottom: initial;
+      margin-top: 0.8rem;
+    }
+  }
+
+  // *** PODCAST LOGOS CONTAINER ***
+  .podcast-logos-container {
+    justify-content: flex-start;
+    margin-top: auto;
+    margin-bottom: initial;
+  }
+
+  .podcast-logo {
+    &--spotify {
+      width: 9.6rem;
+      height: 2.9rem;
+      max-width: initial;
+      max-height: initial;
+      margin-right: 4rem;
+    }
+
+    &--apple {
+      width: 7.8rem;
+      height: 2.9rem;
+      max-width: initial;
+      max-height: initial;
+      margin-right: 4.1rem;
+    }
+
+    &--google {
+      width: 12.5rem;
+      height: 1.8rem;
+      max-width: initial;
+      max-height: initial;
+      margin-right: 2.7rem;
+    }
+
+    &--pocket {
+      width: 12.9rem;
+      height: 2.6rem;
+      max-width: initial;
+      max-height: initial;
+    }
+  }
+
+  // *** PATTERN DOTS CONTAINER ***
+  .pattern-dots-container {
+    height: 25.7rem;
+    display: flex;
+  }
+
+  .pattern-dots-img {
+    display: block;
+    margin-top: auto;
+  }
+}

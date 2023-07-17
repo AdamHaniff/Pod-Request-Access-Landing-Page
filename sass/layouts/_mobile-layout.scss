@@ -1,0 +1,144 @@
+// ********* MOBILE LAYOUT **********
+body {
+  box-sizing: border-box;
+  font-family: $font-primary;
+  font-weight: $font-weight-normal;
+  padding: 6.2rem 2.4rem 9.4rem;
+  background: linear-gradient(
+      rgba($color-mirage, 0.9),
+      rgba($color-mirage, 0.9)
+    ),
+    url("/assets/mobile/image-host.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+main {
+  max-width: 52.35rem;
+}
+
+// ********* LOGO CONTAINER ********
+.logo-container {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 5.7rem;
+}
+
+.logo-img {
+  display: block;
+  max-width: 100%;
+}
+
+// ******** TEXT CONTAINER *********
+.text-container {
+  text-align: center;
+  margin-bottom: 3.3rem;
+
+  &__paragraph {
+    color: $color-periwinkleGrey;
+    font-size: 1.5rem;
+    line-height: 2.5rem;
+  }
+}
+
+.heading-primary {
+  font-size: 2.6rem;
+  line-height: 3.8rem;
+  text-transform: uppercase;
+  margin-bottom: 1.6rem;
+
+  &--green {
+    color: $color-mediumAquamarine;
+  }
+
+  &--white {
+    color: $color-white;
+  }
+
+  &--green,
+  &--white {
+    display: block;
+  }
+}
+
+// **** PODCAST LOGOS CONTAINER ****
+.podcast-logos-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 4.8rem;
+}
+
+.podcast-logo {
+  display: block;
+
+  &--spotify {
+    width: 17.1%;
+    max-width: 9.6rem;
+    max-height: 2.9rem;
+    margin-right: 7%;
+  }
+
+  &--apple {
+    width: 13.8%;
+    max-width: 7.8rem;
+    max-height: 2.9rem;
+    margin-right: 7.6%;
+  }
+
+  &--google {
+    width: 22.3%;
+    max-width: 12.5rem;
+    max-height: 1.8rem;
+    margin-right: 4.9%;
+  }
+
+  &--pocket {
+    width: 23.5%;
+    max-width: 12.9rem;
+    max-height: 2.6rem;
+  }
+}
+
+// ******** FORM CONTAINER *********
+.form,
+.form__input,
+.form__btn {
+  display: block;
+
+  &-error-empty,
+  &-error-invalid {
+    @include error-success-styles($color-error);
+  }
+
+  &-submit-success {
+    @include error-success-styles($color-mediumAquamarine);
+  }
+
+  &__input {
+    @include input-btn-styles;
+    @include text-styles($color-white);
+    background: $color-tuna;
+    padding: 0.9rem 0 0.9rem 3.2rem;
+    margin-bottom: 1.6rem;
+  }
+
+  &__input::placeholder {
+    @include text-styles($color-white);
+    opacity: 0.5;
+  }
+
+  &__input:focus {
+    outline: none;
+  }
+
+  &__btn {
+    @include input-btn-styles;
+    @include text-styles($color-mirage);
+    background: $color-mediumAquamarine;
+    box-shadow: 0 2.5rem 2rem -2rem rgba(84, 230, 175, 0.5);
+  }
+}
