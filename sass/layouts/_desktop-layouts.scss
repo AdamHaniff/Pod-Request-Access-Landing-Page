@@ -1,5 +1,15 @@
 // ******** DESKTOP LAYOUTS *********
 
+// *********** HOVER STATE **********
+// ******** 992px MEDIA QUERY *******
+@media (min-width: 62em) {
+  .form__btn:is(:hover, :focus) {
+    cursor: pointer;
+    background: $color-buttonHover;
+    outline: none;
+  }
+}
+
 // ******* 1165px MEDIA QUERY *******
 @media (min-width: 72.81em) {
   body {
@@ -59,12 +69,5 @@
     height: 10.4rem;
     margin-top: initial;
     transform: translateY(-50%);
-  }
-
-  // ********* HOVER STATE *********
-  .form__btn:is(:hover, :focus) {
-    cursor: pointer;
-    background: $color-buttonHover;
-    outline: none;
   }
 }

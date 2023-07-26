@@ -140,5 +140,6 @@ main {
     @include text-styles($color-mirage);
     background: $color-mediumAquamarine;
     box-shadow: 0 2.5rem 2rem -2rem rgba(84, 230, 175, 0.5);
+    transition: all 0.3s;
   }
 }

@@ -181,6 +181,7 @@ main {
   color: #121725;
   background: #54e6af;
   box-shadow: 0 2.5rem 2rem -2rem rgba(84, 230, 175, 0.5);
+  transition: all 0.3s;
 }
 
 @media (min-width: 48em) {
@@ -315,6 +316,13 @@ main {
     margin-top: auto;
   }
 }
+@media (min-width: 62em) {
+  .form__btn:is(:hover, :focus) {
+    cursor: pointer;
+    background: #b3ffe2;
+    outline: none;
+  }
+}
 @media (min-width: 72.81em) {
   body {
     display: flex;
@@ -358,11 +366,6 @@ main {
     height: 10.4rem;
     margin-top: initial;
     transform: translateY(-50%);
-  }
-  .form__btn:is(:hover, :focus) {
-    cursor: pointer;
-    background: #b3ffe2;
-    outline: none;
   }
 }
 .hidden {
